@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import Button from "./Button";
+import Counter from "./Counter";
 import GraphView from "./GraphView";
 
 const updater = (current, by) => Math.max(current + by, 0);
@@ -11,6 +12,7 @@ export default () => {
 
   return (
     <>
+      <Counter />
       <Button onClick={() => incrementGraphViewBy(1)} title="Add Graph View" />
       <Button
         onClick={() => incrementGraphViewBy(-1)}
